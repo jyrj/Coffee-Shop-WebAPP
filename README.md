@@ -34,6 +34,3 @@ The `./frontend` directory contains a complete Ionic frontend to consume the dat
 
 [View the README.md within ./frontend for more details.](./frontend/README.md)
 
-Added frontend files:
-
-./frontend can be executed
