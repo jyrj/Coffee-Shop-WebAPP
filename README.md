@@ -37,3 +37,5 @@ The `./frontend` directory contains a complete Ionic frontend to consume the dat
 ### Dependency issue found when using Python 3.7.x (x>0)
 
 Use a virtual environment and add the corresponding dependencies (preferrably using a conda environment)
+
+test update
