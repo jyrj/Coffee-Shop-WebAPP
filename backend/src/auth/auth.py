@@ -31,7 +31,29 @@ class AuthError(Exception):
     return the token part of the header
 '''
 def get_token_auth_header():
-   raise Exception('Not Implemented')
+
+    auth_header = request.headers.get("Authorization", None)
+
+    if not auth_header:
+        raise AuthError({"code": "authorization_header_missing",
+                         "description":
+                         "Authorization header is expected"}, 401)
+
+    header_parts = auth_header.split(' ')
+
+    if len(header_parts) != 2 or not header_parts:
+        raise AuthError({
+            'code': 'invalid_header',
+            'description': 'Authorization header must be in the format'
+            ' Bearer token'}, 401)
+
+    elif header_parts[0].lower() != 'bearer':
+        raise AuthError({
+            'code': 'invalid_header',
+            'description': 'Authorization header must start with Bearer'}, 401)
+
+    return header_parts[1]
+
 
 '''
 @TODO implement check_permissions(permission, payload) method
@@ -45,7 +67,16 @@ def get_token_auth_header():
     return true otherwise
 '''
 def check_permissions(permission, payload):
-    raise Exception('Not Implemented')
+
+    if 'permissions' not in payload:
+        abort(400)
+
+    if permission not in payload['permissions']:
+        raise AuthError({
+            'code': 'unauthorized',
+            'description': 'Permission Not found',
+        }, 401)
+    return True
 
 '''
 @TODO implement verify_decode_jwt(token) method
