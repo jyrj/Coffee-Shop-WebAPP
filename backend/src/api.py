@@ -33,7 +33,7 @@ def get_drinks():
 
     return jsonify({
         "success": True,
-        "drinks": [drinks.short() for drinks in drinks]
+        "drinks": [drink.short() for drink in drinks]
     }), 200
 
 '''
@@ -45,6 +45,16 @@ def get_drinks():
         or appropriate status code indicating reason for failure
 '''
 
+@app.route('drinks-detail', methods=['GET'])
+@requires_auth('get:drinks-detail')
+def get_drink_details(payload):
+    drinks = Drink.query.all()
+
+    return jsonify({
+        "success": True,
+        "drinks": [drink.long() for drink in drinks]
+    }), 200
+
 
 '''
 @TODO implement endpoint
@@ -55,6 +65,8 @@ def get_drinks():
     returns status code 200 and json {"success": True, "drinks": drink} where drink an array containing only the newly created drink
         or appropriate status code indicating reason for failure
 '''
+
+
 
 
 '''
