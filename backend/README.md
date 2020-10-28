@@ -1,4 +1,4 @@
-# Coffee Shop Backend
+# Backend
 
 ## Getting Started
 
@@ -10,7 +10,9 @@ Follow instructions to install the latest version of python for your platform in
 
 #### Virtual Enviornment
 
-We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+
+Another one for easiness is Anaconda environement. Create Python 3.7 conda environment for this project. I have used and tested conda  environment.
 
 #### PIP Dependencies
 
@@ -21,6 +23,8 @@ pip install -r requirements.txt
 ```
 
 This will install all of the required packages we selected within the `requirements.txt` file.
+
+Dependencies might show some conflicts, for any queries, start an issue. Preferrably the dependencies must be installed over mentioned environment, otherwise, will lead to WHEEL_BUILD_ERROR.
 
 ##### Key Dependencies
 
@@ -48,7 +52,11 @@ flask run --reload
 
 The `--reload` flag will detect file changes and restart the server automatically.
 
-## Tasks
+# Example Auth0- For implementing yourself:
+
+Can modify the project to meet your needs.
+
+postman-collection.json can be found in ./backend directory which helps to run and test the corresponding endpoints. Possible JWT are also shown.
 
 ### Setup Auth0
 
@@ -74,12 +82,3 @@ The `--reload` flag will detect file changes and restart the server automaticall
     - Sign into each account and make note of the JWT.
     - Import the postman collection `./starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json`
     - Right-clicking the collection folder for barista and manager, navigate to the authorization tab, and including the JWT in the token field (you should have noted these JWTs).
-    - Run the collection and correct any errors.
-    - Export the collection overwriting the one we've included so that we have your proper JWTs during review!
-
-### Implement The Server
-
-There are `@TODO` comments throughout the `./backend/src`. We recommend tackling the files in order and from top to bottom:
-
-1. `./src/auth/auth.py`
-2. `./src/api.py`
