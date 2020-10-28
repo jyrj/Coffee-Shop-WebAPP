@@ -1,4 +1,9 @@
-# *Coffee Shop Project*
+# Coffee Shop Ionic
+
+[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/jyrj/goodparts "JavaScript The Good Parts") 
+
+[![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jyrj/coffeeshop-app)
+
 
 
 
@@ -10,6 +15,8 @@ The application meet follwing specifications:
 2) Allow public users to view drink names and graphics.
 3) Allow the shop baristas to see the recipe information.
 4) Allow the shop managers to create new drinks and edit existing drinks.
+
+{Can be modified according to need! For any help, start an issue in the repository}
 
 ## Web Application Structure
 
