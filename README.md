@@ -40,7 +40,7 @@ Use a virtual environment and add the corresponding dependencies (preferrably us
 
 ### *Scope for improvement:*
 
-- Although the endpoints are secured, still CSS hasn't been covered.
+- Although the endpoints are secured, still XSS hasn't been covered.
 - Perfest AuthO authorization example, frontend needs to be improved.
 - Currently learning ReactJS to implement frontend.
 
