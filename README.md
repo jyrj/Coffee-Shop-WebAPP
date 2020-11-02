@@ -1,4 +1,5 @@
 # Coffee Shop
+*frontend using Ionic Framework- Angular JS, backend using Flask RESTful API*
 
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/jyrj/goodparts "JavaScript The Good Parts") 
 
